@@ -3,9 +3,6 @@ var config = require('./config'),
     express = require('./express');
     var port = process.env.PORT || 8080;
 
-
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
 module.exports.start = function() {
   var app = express.init();
   app.listen(port, function() {
