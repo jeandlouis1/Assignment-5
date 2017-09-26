@@ -8,8 +8,9 @@ var path = require('path'),
     getCoordinates = require('../controllers/coordinates.server.controller.js');
 
 module.exports.init = function() {
+  var uri = process.env.URI;
   //connect to database
-  mongoose.connect(config.db.uri,{useMongoClient:true});
+  mongoose.connect(uri,{useMongoClient:true});
 
   //initialize app
   var app = express();
